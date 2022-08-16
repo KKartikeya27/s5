@@ -39,5 +39,5 @@ int mod(int a,int b)
     }    
 float division(int a,int b)
     {
-        return float(a)/float(b);
+        return float(a)/(b);
     }
