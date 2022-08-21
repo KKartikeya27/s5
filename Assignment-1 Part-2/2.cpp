@@ -1,27 +1,41 @@
 #include<iostream>
 using namespace std;
+
+
+void printer(long int P,int q,float diff)
+    {
+        cout<<q+1<<"\t\t\t"<<P<<"\t\t\t"<<diff<<endl;
+    }
+
+
+
 void intrst(long int P, int t,float r)
     {
-        int quart;
+        int quart;float diff=0;long int Ptemp;
         quart=t*4;
         for(int i =0;i<quart;i++)
             {
+                Ptemp=P;
                 P=P+(P*(r/4));
-                cout<<P<<endl;
+                diff=P-Ptemp;
+                printer(P,i,diff);
 
 
             }
     }
+
+
 
 int main()
     {   
         long int P;
         int t;
         float r=0.6;
-        cout<<"Enter beggining Balance and time for compounding";
+        cout<<"Enter beggining Balance and time for compounding(in years): ";
         cin>>P>>t;
+        //Printing columns here
+        cout<<"Quarter(s)            Balance             Interest earned"<<endl;
         intrst(P,t,r);
-        // printer(P,t,interest);
 
         return 0;
     }
