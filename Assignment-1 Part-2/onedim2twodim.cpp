@@ -5,7 +5,7 @@ int main()
         int n;
         cout<<"Enter number of elements in 1D array: "<<endl;
         cin>>n;
-        unsigned int onedim[n];  //10 (READ: G++ extensions, only possible with vectors otherwise)
+        int onedim[n];  //10 (READ: G++ extensions, only possible with vectors otherwise)
         srand((unsigned int)time(NULL)); //SEEDING Rand() function look it up.
         for (int i=0;i<n;i++)        //10 (READ: G++ extensions, only possible with vectors otherwise)
             {
