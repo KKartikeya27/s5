@@ -10,7 +10,7 @@ class LinkedList
     {
         public:
         Node* Head=NULL;
-
+//appending at end:
         void append(int a)
             {
                 Node* temp=new Node;
@@ -32,6 +32,7 @@ class LinkedList
                         temp->next=NULL;
                     }
             }
+//printing list       
         void print()
          {
                 Node* traverse=Head;
@@ -42,6 +43,34 @@ class LinkedList
                     }
                 cout<<traverse->data<<endl;
             }
+//Insterting at beginning::
+        void first(int a)
+            {
+                Node * tem= Head;
+                Node *temp= new Node;
+                Head= temp;
+                temp->data=a;
+                temp->next=tem;
+            }
+//insert at a position:
+        void posins(int n,int a)
+            {
+                Node* traverse=Head;
+                if(n==1)    first(a);
+                else
+                    {
+                        while(n>1)
+                            {
+                                traverse=traverse->next;
+                                n--;
+                            }
+                        Node* temnode= traverse;
+                        Node* temp= new Node;
+                        temp->data=a;
+                        temp->next=traverse;
+                        
+                    }
+            }            
     };
 int main()
     {
@@ -60,6 +89,7 @@ int main()
         LL.append(5);
         LL.append(6);
         LL.print();
-        
+        LL.first(69);
+        LL.print();
     }
 
